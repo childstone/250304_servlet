@@ -35,7 +35,12 @@
     </nav>
 </header>
 
-<div class="container" style="min-height: 85vh">
+<main class="container" >
+
+    <% if( request.getParameter("attr") != null && request.getParameter("attr").equals("signup")) { %>
+    <div class="card-panel deep-purple lighten-3 white-text">회원가입을 환영합니다!!</div>
+    <% } %>
+
     <ul class="collection with-header">
         <li class="collection-header"><h4>Welcome Servlet</h4></li>
 
@@ -82,7 +87,7 @@
             </div>
         </li>
     </ul>
-</div>
+</main>
 <footer class="page-footer">
     <div class="container">
         <div class="row">

@@ -1,5 +1,6 @@
 package com.grepp.servlet.study.a_servlet;
 
+import com.grepp.servlet.infra.error.CommonException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -19,7 +20,7 @@ public class F_filter extends HttpServlet {
         
         switch (urlArr[urlArr.length - 1]) {
             case "error":
-                break;
+                throw new CommonException("Exception test");
             case "path":
                 path(req, resp);
                 break;

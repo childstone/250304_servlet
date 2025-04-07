@@ -35,7 +35,7 @@ public class E_session extends HttpServlet {
     
     private void page(HttpServletRequest req, HttpServletResponse resp)
         throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/view/study/d_session.jsp")
+        req.getRequestDispatcher("/WEB-INF/view/study/login.jsp")
             .forward(req, resp);
     }
     

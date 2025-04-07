@@ -1,6 +1,8 @@
 package com.grepp.servlet.study.a_servlet;
 
 import com.grepp.servlet.infra.error.CommonException;
+import com.grepp.servlet.study.b_filter.wrapper.PathWrapper;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -29,7 +31,14 @@ public class F_filter extends HttpServlet {
         }
     }
     
-    private void path(HttpServletRequest req, HttpServletResponse resp) {
+    private void path(HttpServletRequest req, HttpServletResponse resp)
+        throws ServletException, IOException {
+        
+        PathWrapper pathWrapper = (PathWrapper) req;
+        RequestDispatcher dispatcher = req.getRequestDispatcher("study/e_filter");
+        
+        System.out.println(pathWrapper.getWrappedPath());
+        dispatcher.forward(req, resp);
     }
     
     @Override

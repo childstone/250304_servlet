@@ -50,6 +50,10 @@
     <div class="card-panel deep-purple lighten-3 white-text">회원가입을 환영합니다!!</div>
     <% } %>
 
+    <% if( request.getParameter("error") != null) { %>
+    <div class="card-panel red darken-3 lighten-3 white-text"><%= request.getParameter("error")%></div>
+    <% } %>
+
     <ul class="collection with-header">
         <li class="collection-header">
             <% if(principal == null || principal.role().contains(Role.ROLE_ANONYMOUS)){ %>
@@ -94,7 +98,11 @@
             </div>
         </li>
         <li class="collection-item">
-            <div>Filter<a href="/filter/error" class="secondary-content"><i class="material-icons">send</i></a>
+            <div>Exception Filter<a href="/filter/error" class="secondary-content"><i class="material-icons">send</i></a>
+            </div>
+        </li>
+        <li class="collection-item">
+            <div>ViewResolver Filter<a href="/filter/path" class="secondary-content"><i class="material-icons">send</i></a>
             </div>
         </li>
         <li class="collection-item">

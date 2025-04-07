@@ -1,4 +1,4 @@
-package com.grepp.servlet.study.a_servlet;
+package com.grepp.jdbc.study.a_servlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

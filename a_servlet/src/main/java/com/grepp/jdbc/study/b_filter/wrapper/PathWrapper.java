@@ -1,4 +1,4 @@
-package com.grepp.servlet.study.b_filter.wrapper;
+package com.grepp.jdbc.study.b_filter.wrapper;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;

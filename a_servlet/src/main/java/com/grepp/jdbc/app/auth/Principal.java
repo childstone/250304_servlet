@@ -1,4 +1,4 @@
-package com.grepp.servlet.app.auth;
+package com.grepp.jdbc.app.auth;
 
 import java.time.LocalDateTime;
 import java.util.List;

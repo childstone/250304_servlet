@@ -1,7 +1,7 @@
-package com.grepp.servlet.study.b_filter;
+package com.grepp.jdbc.study.b_filter;
 
 
-import com.grepp.servlet.infra.error.CommonException;
+import com.grepp.jdbc.infra.exception.CommonException;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

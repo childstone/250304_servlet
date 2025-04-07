@@ -7,15 +7,15 @@
 
   <filter>
     <filter-name>ExceptionFilter</filter-name>
-    <filter-class>com.grepp.servlet.study.b_filter.ExceptionFilter</filter-class>
+    <filter-class>com.grepp.jdbc.study.b_filter.ExceptionFilter</filter-class>
   </filter>
   <filter>
     <filter-name>EncodingFilter</filter-name>
-    <filter-class>com.grepp.servlet.study.b_filter.EncodingFilter</filter-class>
+    <filter-class>com.grepp.jdbc.study.b_filter.EncodingFilter</filter-class>
   </filter>
   <filter>
     <filter-name>ViewResolver</filter-name>
-    <filter-class>com.grepp.servlet.study.b_filter.ViewResolver</filter-class>
+    <filter-class>com.grepp.jdbc.study.b_filter.ViewResolver</filter-class>
   </filter>
 
   <filter-mapping>

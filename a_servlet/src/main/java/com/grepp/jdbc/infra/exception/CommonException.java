@@ -1,6 +1,6 @@
-package com.grepp.servlet.infra.error;
+package com.grepp.jdbc.infra.exception;
 
-public class CommonException extends RuntimeException{
+public class CommonException extends RuntimeException {
     
     public CommonException(String message) {
         super(message);

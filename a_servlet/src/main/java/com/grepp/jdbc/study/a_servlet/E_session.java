@@ -1,7 +1,7 @@
-package com.grepp.servlet.study.a_servlet;
+package com.grepp.jdbc.study.a_servlet;
 
-import com.grepp.servlet.app.auth.Principal;
-import com.grepp.servlet.app.auth.Role;
+import com.grepp.jdbc.app.auth.Principal;
+import com.grepp.jdbc.app.auth.Role;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

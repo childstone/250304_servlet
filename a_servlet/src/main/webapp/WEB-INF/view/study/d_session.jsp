@@ -37,20 +37,21 @@
 
 <main class="container" >
     <h4>D_cookie</h4>
-    <form action="/cookie/lang">
-        <div class="input-field col s12">
-            <select name="search">
-                <option value="" disabled selected>Choose your option</option>
-                <option value="java">java</option>
-                <option value="html">html</option>
-                <option value="css">css</option>
-                <option value="js">js</option>
-            </select>
-            <label>Materialize Select</label>
+    <form action="/session/login" method="post">
+        <div class="row">
+            <div class="input-field col s7 ">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="email" name="email" type="email" placeholder="email"
+                       class="validate">
+            </div>
+            <div class="input-field col s7 ">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="password" name="password" type="password" placeholder="password"
+                       class="validate">
+            </div>
         </div>
-        <button>전송</button>
+        <button>send</button>
     </form>
-
 </main>
 
 <footer class="page-footer">

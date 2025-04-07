@@ -1,3 +1,5 @@
+<%@ page import="com.grepp.servlet.app.auth.Principal" %>
+<%@ page import="com.grepp.servlet.app.auth.Role" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
@@ -27,10 +29,17 @@
     <nav class="navbar white">
         <div class="nav-wrapper ">
             <a href="/" class="brand-logo grey-text">Grepp</a>
+            <% Principal principal = (Principal) session.getAttribute("principal");
+                if(principal == null || principal.role().contains(Role.ROLE_ANONYMOUS)){ %>
             <ul id="nav-mobile" class="right hide-on-med-and-down grey-text">
                 <li><a href="/member/login" class="grey-text">sign in</a></li>
-                <li><a href="badges.html" class="grey-text">sign up</a></li>
+                <li><a href="/member/signup" class="grey-text">sign up</a></li>
             </ul>
+            <% } else { %>
+            <ul id="nav-mobile" class="right hide-on-med-and-down grey-text">
+                <li><a href="/member/logout" class="grey-text">logout</a></li>
+            </ul>
+            <% } %>
         </div>
     </nav>
 </header>
@@ -42,7 +51,13 @@
     <% } %>
 
     <ul class="collection with-header">
-        <li class="collection-header"><h4>Welcome Servlet</h4></li>
+        <li class="collection-header">
+            <% if(principal == null || principal.role().contains(Role.ROLE_ANONYMOUS)){ %>
+            <h4>Welcome Servlet</h4>
+            <% } else { %>
+            <h4>Welcome <%= principal.userId() %></h4>
+            <% } %>
+        </li>
 
         <li class="collection-item">
             <div>GET<a href="/request/get?name=hmd" class="secondary-content"><i
@@ -75,7 +90,7 @@
                     class="material-icons">send</i></a></div>
         </li>
         <li class="collection-item">
-            <div>Cache<a href="/cache" class="secondary-content"><i class="material-icons">send</i></a>
+            <div>Cache<a href="/assets/img/bg.jpg" class="secondary-content"><i class="material-icons">send</i></a>
             </div>
         </li>
         <li class="collection-item">

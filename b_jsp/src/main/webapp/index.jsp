@@ -7,6 +7,7 @@
 </head>
 <body>
 <%@include file="/WEB-INF/view/include/header.jsp" %>
+<%@include file="/WEB-INF/view/include/sidenav.jsp" %>
 <main class="container">
     <c:if test="${not empty param.attr and param.attr eq 'signup'}">
         <div class="card-panel deep-purple lighten-3 white-text">회원가입을 환영합니다!!</div>
